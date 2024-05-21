@@ -1,0 +1,14 @@
+<app-person-generator (generateRequest)="generate($event)">
+</app-person-generator>
+
+<div class="person-list-header">
+  <div class="header-cell"> # </div>
+  <div class="header-cell"> Prénom </div>
+  <div class="header-cell"> Nom </div>
+  <div class="header-cell"> Sexe </div>
+  <div class="header-cell"> Email </div>
+</div>
+
+<div class="person-list">
+  <app-person-item *ngFor="let person of persons" [person]="person"></app-person-item>
+</div>
